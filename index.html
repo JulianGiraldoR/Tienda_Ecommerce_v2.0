@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Menu Resposive 2.0</title>
+    <script
+      src="https://kit.fontawesome.com/41bcea2ae3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="header__superior">
+        <div class="logo">
+          <img src="img/logo.svg" alt="logo" />
+        </div>
+        <div class="search">
+          <input type="search" placeholder="Busqueda" />
+        </div>
+
+
+        <!--CARRITO DE COMPRAS-->
+        <div class="container-icon">
+          <div class="container-cart-icon">
+            <img src="/img/cart.png" alt="">
+           
+
+            <div class="count-products">
+              <span id="contador-productos">0 </span>
+            </div>
+          </div>
+
+          <div class="container-cart-products hidden-cart">
+            <div class="row-product">
+              <div class="cart-product">
+                <div class="info-cart-product">
+                  <span class="cantidad-producto-carrito"></span>
+                  <p class="titulo-producto"></p>
+                  <span class="precio-producto-carrito"></span>
+                </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="icon-close"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div class="cart-total">
+              <h3>Total:</h3>
+              <span class="total-pagar">$200</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container__menu">
+        <div class="menu">
+          <input type="checkbox" id="check__menu" />
+          <label for="check__menu" id="label__check">
+            <i class="fas fa-bars icon__menu"></i>
+          </label>
+          <nav>
+            <ul>
+              <li><a href="#" id="selected"></a></li>
+              <li><a href="#">Acerca de Nosotros</a></li>
+              <li>
+                <a href="#">Productos</a>
+                <ul>
+                  <li><a href="#">Hogar y Decoracion</a></li>
+                  <li><a href="#">Maquinas de Peluqueria</a></li>
+                  <li><a href="#">Jugueteria Y Navidad</a></li>
+                  <li><a href="#">Audio y Video</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Contactanos</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!--main-->
+
+    <div class="container-items">
+        <div class="item">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8emFwYXRvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              alt="producto1"
+            />
+          </figure>
+          <div class="info-product">
+            <h2>Tennis Nike</h2>
+            <p class="price">$126000</p>
+            <button class="btn-add-cart">Añadir al Carrito</button>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8emFwYXRvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              alt="producto2"
+            />
+          </figure>
+          <div class="info-product">
+            <h2>Tennis Nike</h2>
+            <p class="price">$250000</p>
+            <button class="btn-add-cart">Añadir al Carrito</button>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8emFwYXRvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              alt="producto3"
+            />
+          </figure>
+          <div class="info-product">
+            <h2>Zapatilla Casual</h2>
+            <p class="price">$200000</p>
+            <button class="btn-add-cart">Añadir al Carrito</button>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8emFwYXRvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              alt="producto4"
+            />
+          </figure>
+          <div class="info-product">
+            <h2>Zapatilla Nike</h2>
+            <p class="price">$450000</p>
+            <button class="btn-add-cart">Añadir al Carrito</button>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8emFwYXRvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              alt="producto5"
+            />
+          </figure>
+          <div class="info-product">
+            <h2>Tenis Nike</h2>
+            <p class="price">$530000</p>
+            <button class="btn-add-cart">Añadir al Carrito</button>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHphcGF0b3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+              alt="producto5"
+            />
+          </figure>
+          <div class="info-product">
+            <h2>Tenis Nike</h2>
+            <p class="price">$85000</p>
+            <button class="btn-add-cart">Añadir al Carrito</button>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8emFwYXRvc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+              alt="producto5"
+            />
+          </figure>
+          <div class="info-product">
+            <h2>Tenis Nike</h2>
+            <p class="price">$120000</p>
+            <button class="btn-add-cart">Añadir al Carrito</button>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHphcGF0b3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+              alt="producto5"
+            />
+          </figure>
+          <div class="info-product">
+            <h2>Zapatilla Casual</h2>
+            <p class="price">$95000</p>
+            <button class="btn-add-cart">Añadir al Carrito</button>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1562183241-b937e95585b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fHphcGF0b3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+              alt="producto5"
+            />
+          </figure>
+          <div class="info-product">
+            <h2>Tenis Nike</h2>
+            <p class="price">$265000</p>
+            <button class="btn-add-cart">Añadir al Carrito</button>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1463100099107-aa0980c362e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHphcGF0b3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+              alt="producto5"
+            />
+          </figure>
+          <div class="info-product">
+            <h2>Zapatilla Converse</h2>
+            <p class="price">$350000</p>
+            <button class="btn-add-cart">Añadir al Carrito</button>
+          </div>
+        </div>
+        <div class="item">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1575537302964-96cd47c06b1b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHphcGF0b3N8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+              alt="producto5"
+            />
+          </figure>
+          <div class="info-product">
+            <h2>Tenis Nike Jordan</h2>
+            <p class="price">$650000</p>
+            <button class="btn-add-cart">Añadir al Carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <div class="developer">Developed by julian Giraldo. Copyright, &copy;2022</div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+  
+</html>

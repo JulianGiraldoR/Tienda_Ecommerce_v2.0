@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:#ECF8F9;
+}
+
+/*Header Superior */
+
+.header__superior{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20x;
+}
+
+
+/*logo*/
+
+.logo img{
+    width: 250px;
+}
+
+/*barra de busqueda*/
+
+.search input{
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color:rgb(215, 207, 218);
+
+}
+
+/*Barra Menu*/
+
+.container__menu{
+    width: 100%;
+    height: 70px;
+    background:#3f0277;
+    padding:0px 20px;
+    
+}
+
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+}
+
+nav{
+    height: 100%;
+}
+
+nav > ul {
+    height: 100%;
+    gap: 100px;
+    display: flex;      
+}
+
+nav  ul  li {
+    
+    height: 100%;
+    list-style: none;
+    position: relative;
+  
+}
+
+/*Logo de Home*/
+nav > ul > li:first-child > a {
+    background-image: url(../img/home2.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+}
+
+nav > ul > li:first-child:hover >a {
+    background-image: url(../img/home2.png);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+nav > ul > li > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: all 400ms ease;
+    color: white;
+}
+nav > ul > li > a:hover{
+    transform: scale(1.1);
+    background: #8100c7;
+    box-shadow: 0px 0px 10px 0px rgb(0,0,0,0.5);
+}
+
+#selected{
+    transform: scale(1.1);
+    background-color:#8500c7 ;
+    box-shadow: 0px 0px 10px 0px rgb(0,0,0,0.5);
+}
+
+/*Submenu*/
+
+nav ul li ul{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 90px;
+    left:-5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 10px 0px rgb(0,0,0,0.5);
+    z-index: 10;
+    transition: all 400ms ease;
+}
+nav ul li:hover ul{
+    visibility: visible;
+    opacity: 1;
+    top: 70px;  
+}
+
+nav ul li ul::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right:12px solid transparent ;
+    border-bottom: 12px solid white;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a{
+   
+    display: block;
+    color:#4e00e9 ;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+nav ul li ul li a:hover{
+    background:#7942e7 ;
+    color: white;
+    transform: scale(1.1);
+    padding-left:30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgb(0,0,0,0.5);
+   
+}
+
+/*Elementos Resposive*/
+
+.icon__menu{
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+    width: 26px;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#label__check{
+    width: 26px;
+    height: 100%;
+    display: none;
+}
+
+#check__menu{
+    display: none;
+}
+
+
+
+/*****************************************  CARRITO DE COMPRAS **************************************************/
+
+.container-cart-icon{
+    width: 50px;
+    height: 50px;
+    
+}
+
+.container-cart-icon:hover{
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container-icon{
+    position: relative;
+}
+
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+    background-color: #000;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    
+
+}
+
+#contador-productos{
+    font-size: 12px;
+}
+
+.container-cart-products{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color:#fff ;
+    width: 400px;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+
+}
+
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+
+}
+
+.cart-product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+}
+
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+   
+}
+.titulo-producto-carrito{
+    font-size: 20px;
+
+}
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+
+}
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+
+}
+.cart-total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 2px;
+
+}
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+.total-pagar{
+    font-size: 20px;
+    font-weight:900 ;
+}
+
+.hidden-cart{
+    display: none;
+}
+
+/*****************************************  MAIN  **************************************************/
+
+.container-items{
+
+    margin-top: 160px;
+    padding: 50px;
+    display: grid;
+    width:100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.item{
+    
+    justify-content: center;
+    border-radius: 10px;
+    
+}
+
+.item:hover{
+    box-shadow: 0 0 20px rgba(69, 5, 73, 0.9);
+}
+
+
+.item img{
+   
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 50px;
+    transition: all .7s;
+    
+  
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.item:hover img{
+    transform: scale(1.2);
+    
+
+}
+.info-product{
+    padding: 10px 20px;
+    line-height: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-product button{
+    border: none;
+    background: none;
+    background-color:#3f0277;
+    color: white;
+    padding: 15px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.cart-empty{
+    padding: 20px;
+    text-align: center;
+}
+
+
+/*FOOTER*/
+
+.footer{
+    width: 100%;
+    font-family: "Dosis";
+    text-align: center;
+    font-weight: 500;
+    margin-top: 1rem;
+    padding: 1rem 0rem;
+    font-size: 15px;
+}
+
+/*responsive para celulares 720 pxl*/
+@media screen and (max-width: 720px){
+
+    .container-items{
+        width:100%;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       
+    }
+    .item{
+    
+        justify-content: center;
+        border-radius: 10px;
+        
+    }
+    
+    .item:hover{
+        box-shadow: 0 0 20px rgba(69, 5, 73, 0.9);
+    }
+    
+    
+    .item img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 50px;
+        transition: all .7s;
+        
+      
+    }
+    
+    .item figure{
+        overflow: hidden;
+    }
+    
+    .item:hover img{
+        transform: scale(1.2);
+    
+    }
+    .search input{
+        display: none;
+    }
+    .header__superior{
+        justify-content: center;
+        padding: 15px;
+       
+    }
+
+
+    .logo img{
+      width: 200px;
+      
+    }
+    
+    nav > ul{
+        flex-direction: column;
+        background-color: #8100c7;
+        position: fixed;
+        gap: 0px;
+        left: 0;
+        top: 158px;
+        width: 100%;
+        height:0px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 0;
+        visibility: hidden;
+    }
+    nav > ul > li > a:hover{
+        transform: scale(1);
+    }
+    nav ul li ul{
+        left :90px;
+    }
+
+    nav ul li:hover ul{
+        top:50px
+    }
+    nav > ul >li:first-child a{
+        background-position: 20px;
+    }
+
+    #selected{
+        transform: scale(1);
+    }
+    #label__check{
+        display: block;
+    }
+    .icon__menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #check__menu:checked ~ nav > ul{
+        
+        height: 300px;
+        visibility: visible;
+        opacity: 1;
+    }
+    main{
+        margin-top: 158px;
+    }
+
+  
+}
